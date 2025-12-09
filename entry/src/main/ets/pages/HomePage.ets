@@ -1,6 +1,5 @@
-import { Category } from "../components/Category"
+import { HomeWaterfall } from "../components/HomeWaterfall"
 import { Individual } from "../components/Individual"
-import { Selected } from "../components/Selected"
 import { ShopCart } from "../components/ShopCart"
 
 @Entry
@@ -24,23 +23,19 @@ struct HomePage {
   build() {
     Tabs({ barPosition: BarPosition.End }) {
       TabContent() {
-        Category()
-      }.tabBar(this.tarBarBuilder(0, $r("app.media.jinxuan"), "精选"))
-
-      TabContent() {
-        Selected()
-      }.tabBar(this.tarBarBuilder(1, $r("app.media.fenlei"), "分类"))
+        HomeWaterfall()
+      }.tabBar(this.tarBarBuilder(0, $r("app.media.jinxuan"), "首页"))
 
       TabContent() {
         ShopCart({ refreshKey: this.cartRefresh })
-      }.tabBar(this.tarBarBuilder(2, $r("app.media.gowu"), "购物"))
+      }.tabBar(this.tarBarBuilder(1, $r("app.media.gowu"), "购物"))
 
       TabContent() {
         Individual()
-      }.tabBar(this.tarBarBuilder(3, $r("app.media.wode"), "我的"))
+      }.tabBar(this.tarBarBuilder(2, $r("app.media.wode"), "我的"))
     }.onChange((index) => {
       this.currentIndex = index
-      if (index === 2) {
+      if (index === 1) {
         // 切到购物车时触发刷新
         this.cartRefresh = Date.now();
       }
