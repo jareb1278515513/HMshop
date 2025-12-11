@@ -7,6 +7,8 @@ server:
       enabled: true
 
 spring:
+  config:
+    import: optional:classpath:application-secret.yml
   datasource:
     # 使用内存库避免文件锁，启动时 data.sql 会自动导入
     url: jdbc:h2:mem:hmshop;MODE=MySQL;DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1;CASE_INSENSITIVE_IDENTIFIERS=TRUE
@@ -33,5 +35,5 @@ logging:
 
 deepseek:
   api:
-    key: sk-123a1ba9c17543989f95713faf9503ad
+    key: ${DEEPSEEK_API_KEY}
     url: https://api.deepseek.com/chat/completions
