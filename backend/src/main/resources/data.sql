@@ -121,15 +121,15 @@ VALUES (1055030, '屏幕尺寸', '86英寸', CURRENT_TIMESTAMP, CURRENT_TIMESTAM
 INSERT INTO goods_specification (id, goods_id, specification, spec_value, pic_url, add_time, update_time, deleted)
 VALUES (50201, 1055030, '安装方式', '挂架式', '', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
        (50202, 1055030, '安装方式', '底座式', '', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
-       (50301, 1055031, '颜色', '韵律蓝', 'http://hmapp.net/static/img/goods_spk1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
-       (50302, 1055031, '颜色', '鎏金黑', 'http://hmapp.net/static/img/goods_spk2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+       (50301, 1055031, '颜色', '韵律黑', 'http://hmapp.net/static/img/goods_spk1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (50302, 1055031, '颜色', '悦动白', 'http://hmapp.net/static/img/goods_spk2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
 
 -- 商品库存 (Product)
 INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
 VALUES (60201, 1055030, '挂架式', 5999, 100, 'http://hmapp.net/static/img/goods_tv1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
        (60202, 1055030, '底座式', 6099, 50, 'http://hmapp.net/static/img/goods_tv1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
-       (60301, 1055031, '韵律蓝', 1999, 200, 'http://hmapp.net/static/img/goods_spk1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
-       (60302, 1055031, '鎏金黑', 1999, 150, 'http://hmapp.net/static/img/goods_spk2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+       (60301, 1055031, '韵律黑', 1999, 200, 'http://hmapp.net/static/img/goods_spk1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (60302, 1055031, '悦动白', 1999, 150, 'http://hmapp.net/static/img/goods_spk2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
 
 -- 新增 Banner
 INSERT INTO banner (name, link, url, position, content, enabled, add_time, update_time, deleted)
@@ -213,6 +213,100 @@ VALUES (50601, 1055042, '颜色', '雅川青', 'http://hmapp.net/static/img/good
 INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
 VALUES (60601, 1055042, '雅川青', 4999, 100, 'http://hmapp.net/static/img/goods_pad1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
        (60602, 1055042, '曜金黑', 4999, 100, 'http://hmapp.net/static/img/goods_pad2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+
+-- 新增分类：数码配件
+INSERT INTO category (id, name, keywords, description, pid, icon_url, pic_url, level, sort_order, add_time, update_time, deleted)
+VALUES (1008005, '数码配件', '耳机,手表', '数码好搭档', 1008000, 'http://hmapp.net/static/img/cat_icon_acc.png', 'http://hmapp.net/static/img/cat_pic_acc.png', 'L2', 4, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+
+-- 新增商品：HUAWEI Pura 70 Ultra (手机)
+INSERT INTO goods (id, goods_sn, name, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, detail, add_time, update_time, deleted)
+VALUES (1055080, 'HM-PURA-001', 'HUAWEI Pura 70 Ultra', 1008002, 1001000,
+        'http://hmapp.net/static/img/goods_pura1.png,http://hmapp.net/static/img/goods_pura2.png',
+        'Pura,影像', '超聚光伸缩摄像头', TRUE, 11, 'http://hmapp.net/static/img/goods_pura1.png', 'http://hmapp.net/static/img/goods_pura1.png',
+        TRUE, TRUE, '台', 9999, 9999,
+        '<p>HUAWEI Pura 70 Ultra 追逐本心，锐意向前。</p><img src=\"http://hmapp.net/static/img/goods_pura1.png\"/>',
+        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_attribute (goods_id, attribute, attr_value, add_time, update_time, deleted)
+VALUES (1055080, '屏幕', '6.8英寸 OLED', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (1055080, '摄像头', '超聚光伸缩', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_specification (id, goods_id, specification, spec_value, pic_url, add_time, update_time, deleted)
+VALUES (50801, 1055080, '颜色', '香颂绿', 'http://hmapp.net/static/img/goods_pura1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (50802, 1055080, '颜色', '摩卡棕', 'http://hmapp.net/static/img/goods_pura2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
+VALUES (60801, 1055080, '香颂绿', 9999, 50, 'http://hmapp.net/static/img/goods_pura1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (60802, 1055080, '摩卡棕', 9999, 50, 'http://hmapp.net/static/img/goods_pura2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+
+-- 新增商品：HUAWEI MateBook D 16 (电脑)
+INSERT INTO goods (id, goods_sn, name, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, detail, add_time, update_time, deleted)
+VALUES (1055081, 'HM-PC-002', 'HUAWEI MateBook D 16', 1008003, 1001000,
+        'http://hmapp.net/static/img/goods_matebookd1.png,http://hmapp.net/static/img/goods_matebookd2.png',
+        '笔记本,大屏', '16英寸护眼全面屏', TRUE, 21, 'http://hmapp.net/static/img/goods_matebookd1.png', 'http://hmapp.net/static/img/goods_matebookd1.png',
+        TRUE, FALSE, '台', 4999, 4599,
+        '<p>HUAWEI MateBook D 16 轻薄大屏，办公利器。</p><img src=\"http://hmapp.net/static/img/goods_matebookd1.png\"/>',
+        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_attribute (goods_id, attribute, attr_value, add_time, update_time, deleted)
+VALUES (1055081, '处理器', 'i5-13500H', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (1055081, '屏幕', '16英寸', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_specification (id, goods_id, specification, spec_value, pic_url, add_time, update_time, deleted)
+VALUES (50811, 1055081, '颜色', '皓月银', 'http://hmapp.net/static/img/goods_matebookd1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (50812, 1055081, '颜色', '深空灰', 'http://hmapp.net/static/img/goods_matebookd2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
+VALUES (60811, 1055081, '皓月银', 4599, 100, 'http://hmapp.net/static/img/goods_matebookd1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (60812, 1055081, '深空灰', 4599, 100, 'http://hmapp.net/static/img/goods_matebookd2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+
+-- 新增商品：HUAWEI MatePad 11.5 S (平板)
+INSERT INTO goods (id, goods_sn, name, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, detail, add_time, update_time, deleted)
+VALUES (1055082, 'HM-PAD-002', 'HUAWEI MatePad 11.5 S', 1008004, 1001000,
+        'http://hmapp.net/static/img/goods_pad11_1.png,http://hmapp.net/static/img/goods_pad11_2.png',
+        '平板,柔光屏', '云晰柔光屏，防眩护眼', TRUE, 31, 'http://hmapp.net/static/img/goods_pad11_1.png', 'http://hmapp.net/static/img/goods_pad11_1.png',
+        TRUE, TRUE, '台', 2599, 2299,
+        '<p>HUAWEI MatePad 11.5 S 更好看的柔光屏。</p><img src=\"http://hmapp.net/static/img/goods_pad11_1.png\"/>',
+        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_attribute (goods_id, attribute, attr_value, add_time, update_time, deleted)
+VALUES (1055082, '屏幕', '11.5英寸 144Hz', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (1055082, '特色', '柔光屏', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_specification (id, goods_id, specification, spec_value, pic_url, add_time, update_time, deleted)
+VALUES (50821, 1055082, '颜色', '羽砂紫', 'http://hmapp.net/static/img/goods_pad11_1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (50822, 1055082, '颜色', '冰霜银', 'http://hmapp.net/static/img/goods_pad11_2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
+VALUES (60821, 1055082, '羽砂紫', 2299, 100, 'http://hmapp.net/static/img/goods_pad11_1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (60822, 1055082, '冰霜银', 2299, 100, 'http://hmapp.net/static/img/goods_pad11_2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+
+-- 新增商品：HUAWEI FreeBuds Pro 3 (配件)
+INSERT INTO goods (id, goods_sn, name, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, detail, add_time, update_time, deleted)
+VALUES (1055083, 'HM-ACC-001', 'HUAWEI FreeBuds Pro 3', 1008005, 1001000,
+        'http://hmapp.net/static/img/goods_buds1.png,http://hmapp.net/static/img/goods_buds2.png',
+        '耳机,降噪', '超CD级无损音质', TRUE, 41, 'http://hmapp.net/static/img/goods_buds1.png', 'http://hmapp.net/static/img/goods_buds1.png',
+        TRUE, TRUE, '个', 1499, 1199,
+        '<p>HUAWEI FreeBuds Pro 3 巅峰音质。</p><img src=\"http://hmapp.net/static/img/goods_buds1.png\"/>',
+        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_attribute (goods_id, attribute, attr_value, add_time, update_time, deleted)
+VALUES (1055083, '降噪', '智慧动态降噪3.0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (1055083, '音质', 'L2HC 3.0', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_specification (id, goods_id, specification, spec_value, pic_url, add_time, update_time, deleted)
+VALUES (50831, 1055083, '颜色', '雅川青', 'http://hmapp.net/static/img/goods_buds1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (50832, 1055083, '颜色', '陶瓷白', 'http://hmapp.net/static/img/goods_buds2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
+VALUES (60831, 1055083, '雅川青', 1199, 200, 'http://hmapp.net/static/img/goods_buds1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (60832, 1055083, '陶瓷白', 1199, 200, 'http://hmapp.net/static/img/goods_buds2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+
+-- 新增商品：HUAWEI Watch GT 4 (配件)
+INSERT INTO goods (id, goods_sn, name, category_id, brand_id, gallery, keywords, brief, is_on_sale, sort_order, pic_url, share_url, is_new, is_hot, unit, counter_price, retail_price, detail, add_time, update_time, deleted)
+VALUES (1055084, 'HM-ACC-002', 'HUAWEI Watch GT 4', 1008005, 1001000,
+        'http://hmapp.net/static/img/goods_watch1.png,http://hmapp.net/static/img/goods_watch2.png',
+        '手表,运动', '几何美学，强劲续航', TRUE, 42, 'http://hmapp.net/static/img/goods_watch1.png', 'http://hmapp.net/static/img/goods_watch1.png',
+        TRUE, TRUE, '个', 1588, 1488,
+        '<p>HUAWEI Watch GT 4 科学运动，健康管理。</p><img src=\"http://hmapp.net/static/img/goods_watch1.png\"/>',
+        CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_attribute (goods_id, attribute, attr_value, add_time, update_time, deleted)
+VALUES (1055084, '续航', '最长14天', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (1055084, '防水', 'IP68', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_specification (id, goods_id, specification, spec_value, pic_url, add_time, update_time, deleted)
+VALUES (50841, 1055084, '颜色', '云杉绿', 'http://hmapp.net/static/img/goods_watch1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (50842, 1055084, '颜色', '曜石黑', 'http://hmapp.net/static/img/goods_watch2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
+INSERT INTO goods_product (id, goods_id, specifications, price, number, url, add_time, update_time, deleted)
+VALUES (60841, 1055084, '云杉绿', 1488, 100, 'http://hmapp.net/static/img/goods_watch1.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE),
+       (60842, 1055084, '曜石黑', 1488, 100, 'http://hmapp.net/static/img/goods_watch2.png', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, FALSE);
 
 -- 批量更新图片路径 (将默认域名替换为配置的IP)
 UPDATE shop_user SET avatar = REPLACE(avatar, @old_base, @img_base);

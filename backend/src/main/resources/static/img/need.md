@@ -31,6 +31,8 @@
 | **`cat_pic_pc.png`** | 二级分类Banner - 电脑办公 | 300x200 |
 | **`cat_icon_pad.png`** | 二级分类图标 - 平板电脑 | 100x100 |
 | **`cat_pic_pad.png`** | 二级分类Banner - 平板电脑 | 300x200 |
+| **`cat_icon_acc.png`** | 二级分类图标 - 数码配件 | 100x100 |
+| **`cat_pic_acc.png`** | 二级分类Banner - 数码配件 | 300x200 |
 
 ## 3. 品牌图片 (Brands)
 | 图片文件名 | 用途描述 | 建议尺寸 |
@@ -46,14 +48,24 @@
 | **`goods1c.png`** | Mate 80 Pro | 细节图 | 800x800 |
 | **`goods_tv1.png`** | Vision S 86 | 主图 / 挂架式 | 800x800 |
 | **`goods_tv2.png`** | Vision S 86 | 附图 / 底座式 | 800x800 |
-| **`goods_spk1.png`** | Sound X NEW | 主图 / 韵律蓝 | 800x800 |
-| **`goods_spk2.png`** | Sound X NEW | 附图 / 鎏金黑 | 800x800 |
+| **`goods_spk1.png`** | Sound X NEW | 主图 / 韵律黑 | 800x800 |
+| **`goods_spk2.png`** | Sound X NEW | 附图 / 悦动白 | 800x800 |
 | **`goods_xt1.png`** | Mate XT | 主图 / 瑞红 | 800x800 |
 | **`goods_xt2.png`** | Mate XT | 附图 / 玄黑 | 800x800 |
 | **`goods_pc1.png`** | MateBook X Pro | 主图 / 晴蓝 | 800x800 |
 | **`goods_pc2.png`** | MateBook X Pro | 附图 / 砚黑 | 800x800 |
 | **`goods_pad1.png`** | MatePad Pro | 主图 / 雅川青 | 800x800 |
 | **`goods_pad2.png`** | MatePad Pro | 附图 / 曜金黑 | 800x800 |
+| **`goods_pura1.png`** | Pura 70 Ultra | 主图 / 香颂绿 | 800x800 |
+| **`goods_pura2.png`** | Pura 70 Ultra | 附图 / 摩卡棕 | 800x800 |
+| **`goods_matebookd1.png`** | MateBook D 16 | 主图 / 皓月银 | 800x800 |
+| **`goods_matebookd2.png`** | MateBook D 16 | 附图 / 深空灰 | 800x800 |
+| **`goods_pad11_1.png`** | MatePad 11.5 S | 主图 / 海岛蓝 | 800x800 |
+| **`goods_pad11_2.png`** | MatePad 11.5 S | 附图 / 冰霜银 | 800x800 |
+| **`goods_buds1.png`** | FreeBuds Pro 3 | 主图 / 雅川青 | 800x800 |
+| **`goods_buds2.png`** | FreeBuds Pro 3 | 附图 / 陶瓷白 | 800x800 |
+| **`goods_watch1.png`** | Watch GT 4 | 主图 / 云杉绿 | 800x800 |
+| **`goods_watch2.png`** | Watch GT 4 | 附图 / 曜石黑 | 800x800 |
 
 ## 5. 营销图片 (Marketing)
 | 图片文件名 | 用途描述 | 建议尺寸 |
