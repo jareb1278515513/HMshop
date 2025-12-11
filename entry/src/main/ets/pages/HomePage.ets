@@ -1,6 +1,7 @@
 import { HomeWaterfall } from "../components/HomeWaterfall"
 import { Individual } from "../components/Individual"
 import { ShopCart } from "../components/ShopCart"
+import { AiRecommend } from "../components/AiRecommend"
 
 @Entry
 @Component
@@ -27,15 +28,19 @@ struct HomePage {
       }.tabBar(this.tarBarBuilder(0, $r("app.media.jinxuan"), "首页"))
 
       TabContent() {
+        AiRecommend()
+      }.tabBar(this.tarBarBuilder(1, $r("app.media.jinxuan"), "AI推荐"))
+
+      TabContent() {
         ShopCart({ refreshKey: this.cartRefresh })
-      }.tabBar(this.tarBarBuilder(1, $r("app.media.gowu"), "购物"))
+      }.tabBar(this.tarBarBuilder(2, $r("app.media.gowu"), "购物"))
 
       TabContent() {
         Individual()
-      }.tabBar(this.tarBarBuilder(2, $r("app.media.wode"), "我的"))
+      }.tabBar(this.tarBarBuilder(3, $r("app.media.wode"), "我的"))
     }.onChange((index) => {
       this.currentIndex = index
-      if (index === 1) {
+      if (index === 2) {
         // 切到购物车时触发刷新
         this.cartRefresh = Date.now();
       }

@@ -4,7 +4,7 @@ import axios, { InternalAxiosRequestConfig, AxiosResponse, AxiosError } from "@o
 // 2.创建axios实例
 export const HttpRequest = axios.create({
   // 指向局域网后端
-  baseURL: "http://127.0.0.1:5344"
+  baseURL: "http://10.21.206.207:5344"
 })
 
 // 3.设置拦截器

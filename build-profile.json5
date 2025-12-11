@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\15281\\.ohos\\config\\default_HMShop-main_KKJ6wnnaNC8KWhScX4DEWazcV708eLknk1OjfuYGits=.cer",
+          "certpath": "C:\\Users\\1\\.ohos\\config\\default_HMshop_whwM7HLE5L0ARKSWGc1Af_AcyyllSxlVcmPROusANWY=.cer",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B4ED5F3B209157B0C43CDAD3A8E0465E99B825857CAFE9D88D1E42F5923DA60E2CB0B188C6C958C",
-          "profile": "C:\\Users\\15281\\.ohos\\config\\default_HMShop-main_KKJ6wnnaNC8KWhScX4DEWazcV708eLknk1OjfuYGits=.p7b",
+          "keyPassword": "0000001A31A28EE0FEA92CDDA9D40901417776B14537D70BC69B9138139B33B46E79823C2DE44CD0B538",
+          "profile": "C:\\Users\\1\\.ohos\\config\\default_HMshop_whwM7HLE5L0ARKSWGc1Af_AcyyllSxlVcmPROusANWY=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\15281\\.ohos\\config\\default_HMShop-main_KKJ6wnnaNC8KWhScX4DEWazcV708eLknk1OjfuYGits=.p12",
-          "storePassword": "0000001B40A9B6E7318A793FA6CD9320DDE22972EA16C4365A2E0E8CCF8963751215C93E26E4B98E60E2F8"
+          "storeFile": "C:\\Users\\1\\.ohos\\config\\default_HMshop_whwM7HLE5L0ARKSWGc1Af_AcyyllSxlVcmPROusANWY=.p12",
+          "storePassword": "0000001A0C12C32BA234F4FA94D2E7514A361CAC80E752BC0BC317480338C22EE8BF7903217857ADE8E1"
         }
       }
     ],
