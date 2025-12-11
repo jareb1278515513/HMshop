@@ -46,8 +46,15 @@ export struct HomeWaterfall {
     await this.loadData(true)
   }
 
-  private getImageHeight(id: number): number {
-    return 150 + (id % 3) * 30
+  @Builder
+  Footer() {
+    Row() {
+      Text("加载中...").fontSize(12).fontColor("#999")
+    }
+    .width("100%")
+    .justifyContent(FlexAlign.Center)
+    .height(50)
+    .visibility(this.isLoading ? Visibility.Visible : Visibility.None)
   }
 
   @Builder
@@ -55,7 +62,7 @@ export struct HomeWaterfall {
     Column() {
       Image(item.picUrl)
         .width("100%")
-        .height(this.getImageHeight(item.id))
+        .aspectRatio(1)
         .objectFit(ImageFit.Cover)
         .borderRadius(12)
       Text(item.name)
@@ -106,40 +113,27 @@ export struct HomeWaterfall {
       .padding({ left: 16, right: 16, top: 12, bottom: 8 })
 
       // 瀑布流内容（滑到底自动加载）
-      Scroll() {
-        Column() {
-          Grid() {
-            ForEach(this.list, (item: NewGoodsListModel) => {
-              GridItem() {
-                this.WaterfallCard(item)
-              }
-              .onClick(() => {
-                this.getUIContext().getRouter().pushUrl({
-                  url: "pages/DetailPage",
-                  params: { did: item.id }
-                })
-              })
-            }, (item: NewGoodsListModel) => item.id.toString())
+      WaterFlow({ footer: this.Footer() }) {
+        ForEach(this.list, (item: NewGoodsListModel) => {
+          FlowItem() {
+            this.WaterfallCard(item)
           }
-          .columnsTemplate("repeat(2, 1fr)")
-          .columnsGap(14)
-          .rowsGap(14)
-          .padding({ left: 14, right: 14, bottom: 24 })
-
-          if (this.isLoading) {
-            Row() {
-              Text("加载中...").fontSize(12).fontColor("#999")
-            }
-            .width("100%")
-            .justifyContent(FlexAlign.Center)
-            .margin({ top: 8, bottom: 12 })
-          }
-        }
+          .onClick(() => {
+            this.getUIContext().getRouter().pushUrl({
+              url: "pages/DetailPage",
+              params: { did: item.id }
+            })
+          })
+        }, (item: NewGoodsListModel) => item.id.toString())
       }
+      .columnsTemplate("1fr 1fr")
+      .columnsGap(14)
+      .rowsGap(14)
+      .padding({ left: 14, right: 14, bottom: 24 })
       .onReachEnd(() => {
         this.loadData(false)
       })
-      .layoutWeight(1);
+      .layoutWeight(1)
     }
     .height("100%")
     .width("100%")
