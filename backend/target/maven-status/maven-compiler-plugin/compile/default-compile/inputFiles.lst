@@ -2,6 +2,7 @@ E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\common\ApiResponse.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\config\AppConfig.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\config\AuthFilter.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\AddressController.java
+E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\AiController.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\AuthController.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\BaseController.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\BrandController.java
@@ -14,6 +15,8 @@ E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\HomeControll
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\OrderController.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\controller\UserController.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\dto\AddressSaveRequest.java
+E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\dto\AiChatRequest.java
+E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\dto\AiChatResponse.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\dto\CartAddRequest.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\dto\CartCheckRequest.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\dto\CartDeleteRequest.java
@@ -95,6 +98,7 @@ E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\repository\TopicReposit
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\repository\UserRepository.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\repository\UserSessionRepository.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\service\AddressService.java
+E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\service\AiService.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\service\AuthService.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\service\CartService.java
 E:\arkTS\HMshop\backend\src\main\java\com\hmshop\backend\service\CatalogService.java

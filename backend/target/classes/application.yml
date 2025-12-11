@@ -30,3 +30,8 @@ spring:
 logging:
   level:
     com.hmshop.backend: INFO
+
+deepseek:
+  api:
+    key: sk-123a1ba9c17543989f95713faf9503ad
+    url: https://api.deepseek.com/chat/completions

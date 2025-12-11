@@ -12,4 +12,8 @@ public interface GoodsRepository extends JpaRepository<Goods, Long>, JpaSpecific
     List<Goods> findByBrandAndDeletedFalse(Brand brand);
 
     List<Goods> findByCategoryAndDeletedFalse(Category category);
+
+    List<Goods> findByIsHotTrueAndDeletedFalse();
+
+    List<Goods> findByIsNewTrueAndDeletedFalse();
 }
