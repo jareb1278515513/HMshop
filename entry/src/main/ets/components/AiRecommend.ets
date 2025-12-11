@@ -141,6 +141,26 @@ export struct AiRecommend {
             }
           }
         })
+
+        if (this.isLoading) {
+          ListItem() {
+            Row() {
+              Column() {
+                Text("正在思考中......")
+                  .fontSize(14)
+                  .fontColor('#999')
+                  .padding(12)
+                  .backgroundColor(Color.White)
+                  .borderRadius({ topLeft: 4, topRight: 16, bottomLeft: 16, bottomRight: 16 })
+                  .margin({ right: 40 })
+              }
+              .alignItems(HorizontalAlign.Start)
+              Blank()
+            }
+            .width('100%')
+            .padding({ left: 12, right: 12, top: 8, bottom: 8 })
+          }
+        }
       }
       .layoutWeight(1)
       .width('100%')
